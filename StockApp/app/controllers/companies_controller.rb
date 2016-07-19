@@ -15,13 +15,26 @@ class CompaniesController < ApplicationController
 	end
 
 	def show
-		stock = StockQuote::Stock.history("VZA", (Date.today - 42), Date.today)
-		plotting_points = []
+		stock = StockQuote::Stock.history("VZ", (Date.today - 42), Date.today)
+		@plotting_points = []
 		stock.each do |share|
 			y_value = ((share.open) + (share.low) + (share.close) + (share.high)/4) 
-			plotting_points << [share.date, y_value]
+			@plotting_points << [share.date, y_value]
 		end
-		plotting_points 
+			
+		labels = [] 
+		@plotting_points.each do |share|
+			labels << share[0]
+		end 	
+
+		data = []
+		@plotting_points.each do |share|
+			data << share[1]		
+		end 	
+		
+		@labels = labels.reverse.to_json
+		@data = data.reverse.to_json 
+	
 	end 
 
 end 
