@@ -8,8 +8,9 @@ class CompaniesController < ApplicationController
 	def index
   	@companies = Company.all
   	if params[:search]
-  		prefix = params[:search][0..3]
-    	@companies = Company.search(prefix).order('name ASC')
+  		prefix = params[:search][0,3]
+    	@companies = Company.search(prefix)
+			@found_companies = @companies.flatten[0..20]
   	else
     	@companies = Company.all.order('name ASC')
   	end

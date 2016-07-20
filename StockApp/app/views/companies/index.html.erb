@@ -1,9 +1,12 @@
-Company Search Results
+<h1 class = "title">Search Results</h1> 
 <br>
 <br> 
-<br> 
-<% @companies.each do |company| %> 
+
+<div class = "companies" > 
+<% @found_companies.each do |company| %> 
 	<%= company.symbol %> 
 	<%= link_to company.name, company_path(company)%>    
 	<br> 
 <%end%> 
+
+</div>
