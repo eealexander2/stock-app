@@ -8,19 +8,9 @@
     <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title>Stock Market Search</title>
-
-    <!-- Bootstrap -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
 	<link href="assets/css/bootstrap-theme.css" rel="stylesheet">
-
-    <!-- siimple style -->
     <link href="assets/css/style.css" rel="stylesheet">
-    
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -30,22 +20,16 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<h1>Search the Stock Market</h1>
-					<h2 class="subtitle"></h2>
 					<div id="countdown"></div>
-					<%= form_tag(companies_path, :method => "get", id: "search-form") do %>
-						<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
-						<%= submit_tag "Search" %>
-						<% end %>
+    					<%=form_tag(companies_path, :method => "get", id: "search-form") do %>
+    						<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+    						<%= submit_tag "Search" %>
+    						<%end%>
 					</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-3">
-						<p class="copyright">Enter the name or symbol of a company to view its price history from the past thirty days. </p>
-                        <!-- 
-                            All links in the footer should remain intact. 
-                            Licenseing information is available at: http://bootstraptaste.com/license/
-                            You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=WeBuild
-                        -->
+						<p class="copyright">Enter the name or symbol of a company to view its average price history from the past thirty days.</p>
 				</div>
 			</div>		
 		</div>
@@ -53,5 +37,4 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.countdown.min.js"></script>
-
 </html> 	
