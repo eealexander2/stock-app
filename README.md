@@ -20,7 +20,6 @@ If you would like to run this application on your local machine, follow the step
 
   ```
   $ bundle exec rake db:create
-  
   ```
 5. Migrate to create models 
 
