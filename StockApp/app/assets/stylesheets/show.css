@@ -10,6 +10,7 @@
 .companies {
 	text-align: center; 
 	color: white;
+	padding-bottom: 5%; 
 }
 
 .title{
@@ -25,4 +26,15 @@
 	margin-top: 5%; 
 	margin-bottom: 5%; 
 	padding-top: 3%;
+}
+
+.search-class {
+	width: 800px !important;
+}
+
+.found-companies {
+	color:white;
+	text-align: center; 
+	padding-top: 5%;
+	padding-bottom: 5%; 
 }
