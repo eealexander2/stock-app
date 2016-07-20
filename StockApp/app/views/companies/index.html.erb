@@ -1,0 +1,9 @@
+Company Search Results
+<br>
+<br> 
+<br> 
+<% @companies.each do |company| %> 
+	<%= company.symbol %> 
+	<%= link_to company.name, company_path(company)%>    
+	<br> 
+<%end%> 
