@@ -5,7 +5,6 @@ class Company < ActiveRecord::Base
 		@found_companies = [] 
 	  @found_companies << where("name ILIKE ?", "#{prefix}%").order('name ASC')
 	  @found_companies << where("symbol ILIKE ?", "#{prefix}%").order('name ASC')
-    @found_companies
 	end
 
 	def self.graph_data(stock)
