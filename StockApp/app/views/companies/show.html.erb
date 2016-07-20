@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Line Chart Test</title>
+</head>
+
+<body onload="displayLineChart(<%=@labels%>, <%=@data%>);">
+	<h1 class = "header"><%=@company%></h1> 
+  <div class="box">
+    <canvas id="lineChart" height="450" width="800"></canvas>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
   <script language="JavaScript"><!--
- 
-  function displayLineChart(labels, dataset) {
+  function displayLineChart(labels, dataset) {  	
     var data = {
         labels: labels, 
         datasets: [
-  
             {
                 label: "My Second dataset",
                 fillColor: "rgba(151,187,205,0.2)",
@@ -28,14 +34,5 @@
     var lineChart = new Chart(ctx).Line(data, options);
   }
   --></script>
-</head>
-
- 
-<body onload="displayLineChart(<%=@labels%>, <%=@data%>);">
-	<h1>The history of the <%=@company%> stock price over the past thirty days</h1> 
-
-  <div class="box">
-    <canvas id="lineChart" height="450" width="800"></canvas>
-  </div>
 </body>
 </html>
