@@ -13,6 +13,11 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
   <script language="JavaScript">
+  
+  $(document).on('page:load', function(){
+    displayLineChart();
+	});
+
   function displayLineChart(labels, dataset) {  	
     var data = {
         labels: labels, 
