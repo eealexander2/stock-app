@@ -1,8 +1,8 @@
 require 'csv'
 class Company < ActiveRecord::Base
 
-	def self.search(prefix)
-		@found_companies = [] 
+  def self.search(prefix)
+    @found_companies = [] 
     @found_companies << where("name ILIKE ?", "#{prefix}%").order('name ASC')
     @found_companies << where("symbol ILIKE ?", "#{prefix}%").order('name ASC')
   end
@@ -25,11 +25,11 @@ class Company < ActiveRecord::Base
   end 
 
   def self.y_axis(data_points)
-  	data = []
-  	data_points.each do |point|
-      data << point[1]		
+    data = []
+    data_points.each do |point|
+     data << point[1]		
     end 	
     data.reverse.to_json
-	end 
+  end 
 
 end 
