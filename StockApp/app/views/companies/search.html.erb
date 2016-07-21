@@ -9,32 +9,28 @@
 
     <title>Stock Market Search</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-	<link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
 
   <body>
 
     <div id="wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-12 col-lg-12">
-					<h1>Search the Stock Market</h1>
-					<div id="countdown"></div>
-    					<%=form_tag(companies_path, :method => "get", id: "search-form") do %>
-    						<%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: "search-bar" %>
-    						<%= submit_tag "Search" %>
-    						<%end%>
-					</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6 col-lg-offset-3">
-						<p class="copyright">Enter the name or symbol of a company to view its average price history from the past month.</p>
-				</div>
-			</div>		
-		</div>
-	</div>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.countdown.min.js"></script>
-</html> 	
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <h1>Search the Stock Market</h1>
+              <%=form_tag(companies_path, :method => "get", id: "search-form") do %>
+                <%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: "search-bar" %>
+                <%= submit_tag "Search" %>
+              <%end%>
+          </div>
+        </div>
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <p class="copyright">Enter the name or symbol of a company to view its average price history from the past month.</p>
+        </div>
+      </div>    
+    </div>
+  </div>
+</html> 
