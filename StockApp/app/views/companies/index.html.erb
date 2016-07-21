@@ -3,7 +3,9 @@
 <div class = "found-companies"> 
   <%if @found_companies.length == 0 %>
     <h2 class = "no-result"> Sorry, we couldn't find what you were looking for. Please try searching again.</h2> 
-  <%else%> 			
+  <%elsif @message.length > 0 %> 
+    <h2 class = "no-result"><%=@message%></h2> 
+  <%else%>   
     <%@found_companies.each do |company| %> 
       <%= company.symbol %> 
       <%= link_to company.name, company_path(company)%>    
