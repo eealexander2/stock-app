@@ -8,7 +8,7 @@ class Company < ActiveRecord::Base
 	end
 
 	def self.graph_data(stock)
-		data_points = []
+	  data_points = []
 		stock.each do |share|
 			y_value = (((share.open) + (share.low) + (share.close) + (share.high))/4) 
 			data_points << [share.date, y_value]

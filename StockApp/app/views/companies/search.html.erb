@@ -22,7 +22,7 @@
 					<h1>Search the Stock Market</h1>
 					<div id="countdown"></div>
     					<%=form_tag(companies_path, :method => "get", id: "search-form") do %>
-    						<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+    						<%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: "search-bar" %>
     						<%= submit_tag "Search" %>
     						<%end%>
 					</div>

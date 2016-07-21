@@ -18,11 +18,12 @@ class CompaniesController < ApplicationController
 
 	def show
 		company = Company.find(params[:id])
-		stock = StockQuote::Stock.history(company.symbol, (Date.today - 42), Date.today)
-		data_points = Company.graph_data(stock)
+	  @stock = StockQuote::Stock.history(company.symbol, (Date.today - 42), Date.today)
+		data_points = Company.graph_data(@stock)
 		@labels = Company.x_axis(data_points)
 		@data = Company.y_axis(data_points)
 		@company = company.name 
 	end 
+ 
 
 end 
