@@ -1,4 +1,3 @@
-require 'csv'
 class Company < ActiveRecord::Base
 
   def self.search(prefix)
