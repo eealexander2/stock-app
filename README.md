@@ -1,4 +1,4 @@
-# stock-app
+# Stock Application
 
 This application allows users to search for and view a company's stock price history. The application runs on Ruby on Rails (v. 4.2.6) and uses a Postgres database. To run this application, make sure this version of Rails is installed and Postgres is running and listening on port 5432. You can learn more about installing and updating Rails in the [documentation](http://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm). Further instructions on setting up Postgres can be located [here](http://www.tutorialspoint.com/postgresql/postgresql_environment.htm). 
 
